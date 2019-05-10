@@ -1,0 +1,46 @@
+.messageContainer {
+  font-family:  Arial, sans-serif;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.message {
+  background-color: #333;
+  opacity: .8;
+  padding: 5px;
+  font-size: .8rem;
+  color: white;
+  border-style: solid;
+  border-color: #252525;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  animation: slide 500ms;
+}
+
+.messageSender {
+  font-size: 1rem;
+  color: skyblue;
+  font-weight: bold;
+}
+
+.dragRegion {
+  -webkit-app-region: drag;
+  background-color: #aaa;
+  opacity: .25;
+  border-radius: 5px;
+  width: 100%;
+  height: 10px;
+  margin-bottom: 5px;
+}
+
+body {
+  pointer-events: none;
+}
+
+@keyframes slide {
+  0% { transform: translateX(400px) }
+
+  100% { transform: translateX(0px) }
+}
